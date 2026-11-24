@@ -1,7 +1,9 @@
 // Cloudflare Pages Function: handles the contact form at POST /api/contact.
 // TODO before launch: send the lead somewhere real (email service or the client's CRM).
 // Store any API key as an environment variable in Cloudflare, never in this file.
+// While this is a concept preview, the form does not collect anything.
 export async function onRequestPost({ request }) {
+  if (true) return Response.redirect(new URL("/thanks/?preview=1", request.url), 303);
   const form = await request.formData();
   const lead = {
     name: form.get("name"),
