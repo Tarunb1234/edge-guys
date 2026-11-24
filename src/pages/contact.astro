@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import ContactForm from "../components/ContactForm.astro";
+import biz from "../data/business.json";
+---
+<Base title={`Contact ${biz.shortName}`} description="Request heating or cooling service in Carmel, Indiana.">
+  <section class="wrap">
+    <h1>Request service</h1>
+    <p class="lead" style="margin:14px 0 28px">Fill this out or call <a href={biz.phoneHref}>{biz.phone}</a>. For emergencies, call.</p>
+    <ContactForm />
+  </section>
+</Base>

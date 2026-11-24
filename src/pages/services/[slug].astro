@@ -1,0 +1,20 @@
+---
+import Base from "../../layouts/Base.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import biz from "../../data/business.json";
+export function getStaticPaths() {
+  return biz.services.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+const { s } = Astro.props;
+---
+<Base title={`${s.title} in Carmel, IN | ${biz.shortName}`} description={s.short}>
+  <section class="wrap">
+    <p class="eyebrow">{s.title}</p>
+    <h1 style="margin-top:12px">{s.title} services in Carmel &amp; nearby</h1>
+    <p class="lead" style="margin-top:14px">{s.short}</p>
+    <div class="grid" style="margin-top:32px">
+      {s.items.map((i) => <div class="card"><h3>{i}</h3></div>)}
+    </div>
+  </section>
+  <section class="wrap" style="padding-top:0"><ContactForm /></section>
+</Base>

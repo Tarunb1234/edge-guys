@@ -1,0 +1,21 @@
+:root{--ink:#0F1B2D;--muted:#55657A;--accent:#E8501F;--line:#E3E8EF;--card:#F5F7FA;--navy:#0F1B2D}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:16px}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border:1.5px solid var(--line)}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(36px,6vw,58px);line-height:1.05;letter-spacing:-1px}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.15;letter-spacing:-.5px}
+section{padding:64px 0}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card p{color:var(--muted);margin-top:6px}
+.photo{background:linear-gradient(135deg,#1C3A5E,#4C7DB0 60%,#9CC3E6);border-radius:18px;min-height:320px;position:relative}
+.photo span{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:6px 10px;border-radius:6px}
+.lead{font-size:19px;color:var(--muted);max-width:560px}
+
+@media (max-width:640px){.navlink{display:none}}

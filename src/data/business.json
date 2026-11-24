@@ -1,0 +1,20 @@
+{
+  "name": "Edge Guys Heating & Cooling",
+  "shortName": "Edge Guys",
+  "phone": "317-595-9720",
+  "phoneHref": "tel:+13175959720",
+  "address": "290 Gradle Dr, Carmel, IN 46032",
+  "since": "2010",
+  "rating": "4.9",
+  "badges": ["BBB Accredited", "NATE certified technicians", "Locally owned and operated"],
+  "serviceArea": ["Carmel", "Fishers", "Zionsville", "Noblesville", "Westfield", "Indianapolis"],
+  "offer": {
+    "title": "$55 furnace or A/C tune-up",
+    "terms": "New customers only. [Add terms and expiration date confirmed by Edge Guys.]"
+  },
+  "services": [
+    { "slug": "cooling", "title": "Cooling", "short": "A/C repair, replacement and tune-ups.", "items": ["Air conditioner repair", "New A/C installation", "Heat pumps", "Seasonal tune-ups"] },
+    { "slug": "heating", "title": "Heating", "short": "Furnace and heat pump repair, 24/7 emergencies.", "items": ["Furnace repair", "New furnace installation", "Heat pumps", "24/7 emergency service"] },
+    { "slug": "air-quality", "title": "Air Quality", "short": "Humidifiers, filtration and ductwork.", "items": ["Humidifiers", "Air filtration", "Ductwork", "Ventilation"] }
+  ]
+}

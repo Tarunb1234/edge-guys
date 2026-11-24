@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import Reviews from "../components/Reviews.astro";
+import biz from "../data/business.json";
+---
+<Base title={`${biz.name} | Carmel, IN HVAC`} description="Family-owned heating and cooling in Carmel, Indiana. Repairs, tune-ups and new systems.">
+  <section class="wrap" style="display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center;padding-top:24px">
+    <div>
+      <p class="eyebrow">{biz.rating} rating · {biz.badges.join(" · ")}</p>
+      <h1 style="margin-top:16px">Carmel's family-owned heating &amp; cooling team.</h1>
+      <p class="lead" style="margin-top:16px">Repairs, tune-ups and new systems for {biz.serviceArea.slice(0, 4).join(", ")}. 24/7 emergency service.</p>
+      <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="/contact/">Book service online</a>
+        <a class="btn btn-ghost" href={biz.phoneHref}>Call {biz.phone}</a>
+      </div>
+      <p style="margin-top:16px;color:var(--muted);font-size:14px">Serving Central Indiana since {biz.since} · Financing available</p>
+    </div>
+    <div class="photo"><span>Replace with a real photo of the Edge Guys team</span></div>
+  </section>
+
+  <div class="wrap" style="margin-top:24px">
+    <div class="card" style="background:#FFF1EB;border-color:#F7CDBB;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center">
+      <div><p class="eyebrow">New customers</p><h2 style="font-size:28px">{biz.offer.title}</h2><p>{biz.offer.terms}</p></div>
+      <a class="btn btn-primary" href="/contact/">Claim the tune-up</a>
+    </div>
+  </div>
+
+  <section class="wrap">
+    <p class="eyebrow">What we fix</p>
+    <h2 style="margin:8px 0 24px">Pick your problem. We'll handle the rest.</h2>
+    <div class="grid">
+      {biz.services.map((s) => (
+        <a class="card" href={`/services/${s.slug}/`} style="text-decoration:none"><h3>{s.title}</h3><p>{s.short}</p></a>
+      ))}
+    </div>
+  </section>
+
+  <section style="background:var(--navy);color:#fff">
+    <div class="wrap">
+      <h2 style="margin-bottom:24px">Why Carmel homeowners call us back</h2>
+      <div class="grid">
+        <div class="card" style="background:#17283F;border-color:#24395A;color:#fff"><h3>Locally owned</h3><p style="color:#A9B8CC">Owned and operated in Carmel.</p></div>
+        <div class="card" style="background:#17283F;border-color:#24395A;color:#fff"><h3>Maintenance membership</h3><p style="color:#A9B8CC">[Plan details confirmed by Edge Guys.]</p></div>
+        <Reviews />
+      </div>
+    </div>
+  </section>
+</Base>

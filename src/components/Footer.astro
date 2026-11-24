@@ -1,0 +1,11 @@
+---
+import biz from "../data/business.json";
+const year = new Date().getFullYear();
+---
+<footer style="border-top:1px solid var(--line);margin-top:40px">
+  <div class="wrap" style="padding-top:28px;padding-bottom:28px;color:var(--muted);font-size:14px">
+    <p><strong>{biz.name}</strong> · {biz.address} · <a href={biz.phoneHref}>{biz.phone}</a></p>
+    <p>Serving {biz.serviceArea.join(", ")}.</p>
+    <p>© {year} {biz.name}</p>
+  </div>
+</footer>
